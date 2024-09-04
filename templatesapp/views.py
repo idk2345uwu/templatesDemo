@@ -7,3 +7,8 @@ def renderTemplate(request):
 def renderTemplate(request):
     data = {"nombre": "Seb"}
     return render(request, 'templatesapp/pagina2.html', data )
+
+
+def infoUsuario(request):
+    data = {"id": "123", "nombre": "Karina", "email": "K-Arina@gmail.com"}
+    return render(request, 'templatesapp/userinfoTemplate.html', data )

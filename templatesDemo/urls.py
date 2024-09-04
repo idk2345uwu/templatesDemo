@@ -17,10 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from templatesapp.views import renderTemplate
+from templatesapp.views import infoUsuario
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('render/', renderTemplate),
     path('render2/', renderTemplate),
+    path('infoUsuario/', infoUsuario),
 ]
