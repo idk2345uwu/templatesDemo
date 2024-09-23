@@ -1,6 +1,10 @@
 
 
 import os
+
+
+import pymysql
+pymysql.install_as_MySqldb()
 """
 Django settings for templatesDemo project.
 
@@ -79,8 +83,11 @@ WSGI_APPLICATION = 'templatesDemo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'DJANGO_DEMO_EMP',
+        'USER': 'root',
+        'PASSWORD': '',
+        'PORT': '3306',
     }
 }
 
